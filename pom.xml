@@ -26,6 +26,8 @@
 		<module>test-springcloud-eureka-server8761</module>
 		<module>test-springcloud-order8000</module>
 		<module>test-springcloud-provider-payment8001</module>
+		<module>test-springcloud-eureka-server8762</module>
+		<module>test-springcloud-eureka-server8763</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>

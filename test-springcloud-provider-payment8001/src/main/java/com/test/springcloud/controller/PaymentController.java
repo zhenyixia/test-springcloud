@@ -41,9 +41,9 @@ public class PaymentController {
 
     log.info("====== 查询结果：" + result);
     if(result != null) {
-      return new CommonResult(200, "查询成功，服务端口：" + serverPort, result);
+      return new CommonResult<>(200, "查询成功，服务端口：" + serverPort, result);
     }else {
-      return new CommonResult(500, "查询失败");
+      return new CommonResult<>(500, "查询失败");
     }
 
   }
