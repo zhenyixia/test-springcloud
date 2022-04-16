@@ -5,6 +5,10 @@ server:
 spring:
   application:
     name: cloud-eureka-server
+  security:
+    user:
+      name: root
+      password: 123456
 
 # Eureka配置
 eureka:
@@ -18,4 +22,10 @@ eureka:
     fetch-registry: false
     # 设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
     service-url:
-      defaultZone: http://eureka8762.com:8762/eureka,http://eureka8761.com:8761/eureka
+      defaultZone: http://${spring.security.user.name}:${spring.security.user.password}@eureka8762.com:8762,http://${spring.security.user.name}:${spring.security.user.password}@eureka8761.com:8761/eureka
+
+
+##安全认证信息
+#security:
+#    basic:
+#      enabled: true
